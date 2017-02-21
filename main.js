@@ -58,7 +58,10 @@ function decimalPress() {
 };
 
 function clearPress(id) {
-	console.log('Клик по кнопке ' + id + '!');
+	memoryNewNumber = false;
+	memoryCurrentNumber = 0;
+	display.value = '0';
+	memoryPendingOperation = '';
 };
 
 // --- Конец кода --- //
