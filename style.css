@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "TickingTimebombBB";
+	src: url("fonts/TickingTimebombBB.eot");
+	src: url("fonts/TickingTimebombBB.eot?#iefix")format("embedded-opentype"),
+	url("fonts/TickingTimebombBB.woff") format("woff"),
+	url("fonts/TickingTimebombBB.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
 :focus {
     outline-width: 0;
 }
@@ -5,8 +15,8 @@
 .calc {
 	margin: 36px auto;
 	width: 376px;
-	height: 358px;
-	padding: 5px;
+	height: 352px;
+	padding: 8px 5px;
 	background-color: #6dcff6;
 	border: 2px solid #eaeaea;
 	-webkit-box-shadow: 13px 13px 17px #dbdbdb;
@@ -14,16 +24,17 @@
 }
 .calc_display-input {
 	width: 342px;
-	height: 72px;
+	height: 64px;
 	border: 2px solid #eaeaea;
 	border-radius: 6px;
-	font-size: 48px;
+	font-size: 60px;
 	text-align: right;
 	padding: 5px;
 	padding-right: 15px;
 	padding-left: 15px;
 	background-color: #333;
 	color: #f2f2f2;
+	font-family: 'TickingTimebombBB', sans-serif;
 }
 
 .btn {

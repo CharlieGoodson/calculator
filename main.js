@@ -4,7 +4,10 @@ var numbers = document.querySelectorAll('.number'),
 	operations = document.querySelectorAll('.operation'),
 	decimal = document.getElementById('decimal'),
 	clearBtns = document.querySelectorAll('.clear_btn'),
-	result = document.getElementById('result');
+	display = document.getElementById('display'),
+	memoryCurrentNumber = 0,
+	memoryNewNumber = false,
+	memoryPendingOperation = '';
 
 // --- Описание событий --- //
 
@@ -31,17 +34,23 @@ for (var i=0; i<clearBtns.length; i++) {
 
 decimal.addEventListener('click', decimalPress);
 
-result.addEventListener('click', resultPress);
-
-
 // --- Определения функций --- //
 
-function numberPress(symbol) {
-	console.log('Клик по кнопке с цифрой ' + symbol + '!');
+function numberPress(number) {
+	if (memoryNewNumber) {
+		display.value = number;
+		memoryNewNumber = false;
+	} else {
+		if (display.value === '0') {
+			display.value = number;
+		} else {
+		display.value += number;
+		};
+	};
 };
 
 function operationPress(symbol) {
-	console.log('Клик по кнопке ' + symbol + ' !');
+	memoryNewNumber = true;
 };
 
 function decimalPress() {
@@ -52,6 +61,4 @@ function clearPress(id) {
 	console.log('Клик по кнопке ' + id + '!');
 };
 
-function resultPress() {
-	console.log('Клик по кнопке =');
-};
+// --- Конец кода --- //
