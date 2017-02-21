@@ -1,0 +1,88 @@
+<!-- Version 1.0.0 21.02.2017 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator JS</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="main.js">
+</head>
+<body>
+	<div class="calc">
+		<div class="calc_display">
+			<input type="text" name="" class="calc_display-input">
+		</div>
+		<div class="calc_buttons">
+			<table class="calc_table">
+				<tr class="calc_buttons-row">
+					<td>
+						<button type="button" class="btn btn_default btn_hover_red clear_btn" id="ce">ce</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default btn_hover_red clear_btn" id="c">c</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default btn_hover_blue operation">/</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default btn_hover_blue operation">*</button>
+					</td>
+				</tr>
+				<tr class="calc_buttons-row">
+					<td>
+						<button type="button" class="number btn btn_default">7</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">8</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">9</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default btn_hover_blue operation">-</button>
+					</td>
+				</tr>
+				<tr class="calc_buttons-row">
+					<td>
+						<button type="button" class="number btn btn_default">4</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">5</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">6</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default btn_hover_blue operation">+</button>
+					</td>
+				</tr>
+				<tr class="calc_buttons-row">
+					<td>
+						<button type="button" class="number btn btn_default">1</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">2</button>
+					</td>
+					<td>
+						<button type="button" class="number btn btn_default">3</button>
+					</td>
+					<td rowspan="2">
+						<button type="button" class="btn btn_default btn_tall btn_hover_blue" id="result">=</button>
+					</td>
+				</tr>
+				<tr class="calc_buttons-row">
+					<td colspan="2">
+						<button type="button" class="number btn btn_default btn_wide">0</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn_default" id="decimal">.</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
