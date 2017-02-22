@@ -86,16 +86,9 @@ function operationPress(symbol) {
 function decimalPress() {
 	if (result === 'error') {
 		return;
-	};
-	if (isNewNumber) {
-		display.value = '0.';
-		isNewNumber = false;
+	} else if (!isDecimal) {
+		display.value += '.';
 		isDecimal = true;
-	} else {
-		if (!isDecimal) {
-			display.value += '.';
-			isDecimal = true;
-		};
 	};
 };
 
