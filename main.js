@@ -5,9 +5,10 @@ var numbers = document.querySelectorAll('.number'),
 	decimal = document.getElementById('decimal'),
 	clearBtns = document.querySelectorAll('.clear_btn'),
 	display = document.getElementById('display'),
-	memoryCurrentNumber = 0,
-	memoryNewNumber = false,
-	memoryPendingOperation = '';
+	result = 0,
+	isNewNumber = false,
+	isDecimal = false,
+	symbolOper = '';
 
 // --- Описание событий --- //
 
@@ -37,9 +38,12 @@ decimal.addEventListener('click', decimalPress);
 // --- Определения функций --- //
 
 function numberPress(number) {
-	if (memoryNewNumber) {
+	if (result === 'error') {
+		return;
+	};
+	if (isNewNumber) {
 		display.value = number;
-		memoryNewNumber = false;
+		isNewNumber = false;
 	} else {
 		if (display.value === '0') {
 			display.value = number;
@@ -50,18 +54,57 @@ function numberPress(number) {
 };
 
 function operationPress(symbol) {
-	memoryNewNumber = true;
+	if (result === 'error') {
+		return;
+	};
+	var current = parseFloat(display.value);
+	if (isNewNumber) {
+		symbolOper = symbol;
+	} else {
+		isNewNumber = true;
+		isDecimal = false;
+		if (symbolOper === '+') {
+			result += current;
+		} else if (symbolOper === '-') {
+			result -= current;
+		} else if (symbolOper === '*') {
+			result *= current;
+		} else if (symbolOper === '/') {
+			if (current === 0) {
+				result = 'error';
+			} else {
+				result /= current;
+			};
+		} else { 
+			result = current;
+		};
+		display.value = result;
+		symbolOper = symbol;
+	};
 };
 
 function decimalPress() {
-	console.log('Клик по кнопке с .');
+	if (result === 'error') {
+		return;
+	};
+	if (isNewNumber) {
+		display.value = '0.';
+		isNewNumber = false;
+		isDecimal = true;
+	} else {
+		if (!isDecimal) {
+			display.value += '.';
+			isDecimal = true;
+		};
+	};
 };
 
 function clearPress(id) {
-	memoryNewNumber = false;
-	memoryCurrentNumber = 0;
+	isNewNumber = false;
+	result = 0;
 	display.value = '0';
-	memoryPendingOperation = '';
+	symbolOper = '';
+	isDecimal = false;
 };
 
 // --- Конец кода --- //
