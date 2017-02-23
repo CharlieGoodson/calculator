@@ -18,11 +18,10 @@ body {
 
 .calc {
 	margin: 36px auto;
-	width: 395px;
+	width: 394px;
 	height: 390px;
 	padding: 10px 5px;
-	background-color: #046380;
-	border: 1px solid #fff;
+	background-color: #2185C5;
 	border-radius: 10px;
 }
 .calc_display-input {
@@ -46,10 +45,10 @@ body {
 	margin: 2px;
 	width: 90px;
 	height: 50px;
-	background-color: #EFECCA;
+	background-color: #FFF6E5;
 	border: 1px solid #fff;
 	font-size: 27px;
-	color: #046380;
+	color: #2185C5;
 	text-transform: uppercase;
 	border-radius: 6px;
 	padding: 0;
@@ -57,15 +56,15 @@ body {
 }
 
 .btn:active {
-	background-color: #E6E2AF;
+	background-color: #7ECEFD;
 }
 
 .btn_tall {
-	height: 104px;
+	height: 108px;
 }
 
 .btn_wide {
-	width: 184px;
+	width: 188px;
 }
 
 p {
