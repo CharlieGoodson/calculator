@@ -57,6 +57,7 @@ body {
 
 .btn:active {
 	background-color: #7ECEFD;
+	color: #fff;
 }
 
 .btn_tall {
