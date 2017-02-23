@@ -93,11 +93,15 @@ function decimalPress() {
 };
 
 function clearPress(id) {
-	isNewNumber = false;
-	result = 0;
-	display.value = '0';
-	symbolOper = '';
-	isDecimal = false;
+	if (id === 'ce') {
+		display.value = '0';
+	} else {
+		isNewNumber = false;
+		result = 0;
+		display.value = '0';
+		symbololOper = '';
+		isDecimal = false;
+	};
 };
 
 // --- Конец кода --- //

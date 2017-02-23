@@ -8,60 +8,56 @@
 	font-weight: normal;
 }
 
+body {
+	background-color: #fff;
+}
+
 :focus {
     outline-width: 0;
 }
 
 .calc {
 	margin: 36px auto;
-	width: 376px;
-	height: 352px;
-	padding: 8px 5px;
-	background-color: #6dcff6;
-	border: 2px solid #eaeaea;
-	-webkit-box-shadow: 13px 13px 17px #dbdbdb;
-	box-shadow: 13px 14px blur 17px #dbdbdb;
+	width: 395px;
+	height: 390px;
+	padding: 10px 5px;
+	background-color: #046380;
+	border: 1px solid #fff;
+	border-radius: 10px;
 }
 .calc_display-input {
-	width: 342px;
-	height: 64px;
-	border: 2px solid #eaeaea;
+	margin-left: 3px;
+	margin-bottom: 7px;
+	width: 355px;
+	height: 60px;
+	border: 1px solid #fff;
 	border-radius: 6px;
 	font-size: 60px;
 	text-align: right;
 	padding: 5px;
 	padding-right: 15px;
 	padding-left: 15px;
-	background-color: #333;
+	background-color: #444;
 	color: #f2f2f2;
 	font-family: 'TickingTimebombBB', sans-serif;
 }
 
 .btn {
+	margin: 2px;
 	width: 90px;
 	height: 50px;
-	background-color: #f4f4f4;
-	border: 2px solid #eaeaea;
+	background-color: #EFECCA;
+	border: 1px solid #fff;
 	font-size: 27px;
-	color: #666;
+	color: #046380;
 	text-transform: uppercase;
 	border-radius: 6px;
 	padding: 0;
 	cursor: pointer;
 }
 
-.btn:hover {
-	background-color: #c2e9ff;
-}
-
-.btn_hover_red:hover {
-	background-color: #d83e3e;
-	color: #f2f2f2;
-}
-
-.btn_hover_blue:hover {
-	background-color: #1ea2ed;
-	color: #f2f2f2;
+.btn:active {
+	background-color: #E6E2AF;
 }
 
 .btn_tall {
@@ -70,4 +66,13 @@
 
 .btn_wide {
 	width: 184px;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	font-size: 9px;
+	padding: 0;
+	margin: 5px 0px;
+	text-align: center;
+	color: #fff;
 }
